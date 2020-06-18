@@ -1,0 +1,148 @@
+*{
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+body {
+  width: 100%;
+  font-family: $font_family;
+  font-weight: $font_regular;
+  font-size: $body_font;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: $font_bold;
+}
+
+
+a{
+  outline: none;
+  @include transition(all 400ms linear);
+  text-decoration: none;
+}
+
+
+p{
+  font-weight: $font_regular;
+  font-family: $font_family;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 2px;
+  font-size: $body_font;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+span{
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  width: 100%;
+  height: auto; 
+  vertical-align: middle;
+  max-width:100%;
+  display: block;
+}
+hr{
+  clear: both;
+  content: "";
+  margin: 15px 0px;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.v_hide{
+  visibility:hidden;
+}
+.hide{
+  display:none !important;
+}
+
+.sm-hide{
+  @media(max-width:1024px){
+    display:none !important ;
+  }
+}
+.sm-show{
+  @media(min-width:1025px){
+    display:none !important;
+  }
+}
+.xs-hide{
+  @media(max-width:767px){
+    display:none !important;
+  }
+}
+.xs-show{
+  @media(min-width:768px){
+    display:none !important;
+  }
+}
+
+.xs-center{
+  @media(max-width:767px){
+    text-align:center;
+  }
+}
+.xs-left{
+  @media(max-width:767px){
+    text-align:left;
+  }
+}
+.xs-right{
+  @media(max-width:767px){
+    text-align:right;
+  }
+}
+.sm-center{
+  @media(max-width:1024px){
+    text-align:center;
+  }
+}
+.sm-left{
+  @media(max-width:1024px){
+    text-align:left;
+  }
+}
+.sm-right{
+  @media(max-width:1024px){
+    text-align:right;
+  }
+}
