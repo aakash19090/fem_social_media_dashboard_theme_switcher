@@ -220,7 +220,61 @@
     .overview_dashboard{
         // height: calc(100vh - 245px);
         background-color: $very_dark_blue;
-        padding: 300px 0 100px;
+        padding: 960px 0 100px;
+        .header{
+            .title{
+                color: $white;
+                font-size: 24px;
+            }
+        }
+
+        .detailed_dashboard{
+            width: 100%;
+            margin-top: 23px;
+            .col{
+                background-color: $dark_desaturated_blue;
+                width: 255px;
+                padding: 25px 23px 20px;
+                border-radius: 6px;
+                margin-bottom: 24px;
+                @include mq( 'phone' ) {
+                    width: 100%;
+                }
+                .txt{
+                    color: $desaturated_blue;
+                    font-size: 13px;
+                    font-weight: $font_bold;
+                }
+                .icon,.count_icon{
+                    float: right;
+                    margin-right: 8px;
+                    
+                    svg{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                .count{
+                    color: $white;
+                    font-weight: $font_bold;
+                    font-size: 30px;
+                    margin-top: 23px;
+                }
+                .count_icon{
+                    margin-top: 40px;
+                    .number{
+                        font-weight: $font_bold;
+                        color: $lime_green;
+                        font-size: 11px;
+                    }
+                    &.down{
+                        .number{
+                            color: $bright_red;
+                        }
+                    }
+                }
+            }
+        }
     }
     &.activated_light_theme{
 

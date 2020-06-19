@@ -954,7 +954,45 @@ hr {
 
 .dashboard_screen .overview_dashboard {
   background-color: #1e202a;
-  padding: 300px 0 100px; }
+  padding: 960px 0 100px; }
+  .dashboard_screen .overview_dashboard .header .title {
+    color: #ffffff;
+    font-size: 24px; }
+  .dashboard_screen .overview_dashboard .detailed_dashboard {
+    width: 100%;
+    margin-top: 23px; }
+    .dashboard_screen .overview_dashboard .detailed_dashboard .col {
+      background-color: #252a41;
+      width: 255px;
+      padding: 25px 23px 20px;
+      border-radius: 6px;
+      margin-bottom: 24px; }
+      @media screen and (max-width: 767px) {
+        .dashboard_screen .overview_dashboard .detailed_dashboard .col {
+          width: 100%; } }
+      .dashboard_screen .overview_dashboard .detailed_dashboard .col .txt {
+        color: #8b97c6;
+        font-size: 13px;
+        font-weight: 700; }
+      .dashboard_screen .overview_dashboard .detailed_dashboard .col .icon, .dashboard_screen .overview_dashboard .detailed_dashboard .col .count_icon {
+        float: right;
+        margin-right: 8px; }
+        .dashboard_screen .overview_dashboard .detailed_dashboard .col .icon svg, .dashboard_screen .overview_dashboard .detailed_dashboard .col .count_icon svg {
+          display: inline-block;
+          vertical-align: middle; }
+      .dashboard_screen .overview_dashboard .detailed_dashboard .col .count {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 30px;
+        margin-top: 23px; }
+      .dashboard_screen .overview_dashboard .detailed_dashboard .col .count_icon {
+        margin-top: 40px; }
+        .dashboard_screen .overview_dashboard .detailed_dashboard .col .count_icon .number {
+          font-weight: 700;
+          color: #1db489;
+          font-size: 11px; }
+        .dashboard_screen .overview_dashboard .detailed_dashboard .col .count_icon.down .number {
+          color: #dc414c; }
 
 .dashboard_screen.activated_light_theme .media_dashboard .top_div_wrapper .header #toggle_switch {
   -moz-transition: all 200ms linear;
