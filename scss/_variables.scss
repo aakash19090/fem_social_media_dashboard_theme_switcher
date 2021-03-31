@@ -2,36 +2,37 @@
 $desk_width :  1440px;
 $mob_width  : 375px;
 
-// Color Pallete
 
-  // Primary
-$lime_green: #1db489;
-$bright_red: #dc414c;
-$facebook: #198ff5;
-$twitter: #1ca0f2;
-$instagram_start: #fdc468;  //linear gradient
-$instagram_end:  #df4996; //linear gradient
-$youtube: #c4032a;
+:root {
+
+  // ? Color Palatte
   
+  --lime_green: #1db489;
+  --bright_red: #dc414c;
+  --facebook: #198ff5;
+  --twitter: #1ca0f2;
+  --instagram_start: #fdc468;  //linear gradient
+  --instagram_end:  #df4996; //linear gradient
+  --youtube: #c4032a;
+
   // Dark Theme
 
-$toggle_gradient_start: #378fe6;
-$toggle_gradient_end: #3eda82;
+  --toggle_gradient_start: #378fe6;
+  --toggle_gradient_end: #3eda82;
 
-$very_dark_blue : #1e202a;          //(BG)
-$very_dark_blue_top_bg : #1f212e;  //(Top BG Pattern)
-$dark_desaturated_blue : #252a41; //(Card BG)
-$desaturated_blue : #8b97c6;    //(Text)
-$white : #ffffff;               //(Text)
+  --very_dark_blue : #1e202a;          //(BG)
+  --very_dark_blue_top_bg : #1f212e;  //(Top BG Pattern)
+  --dark_desaturated_blue : #252a41; //(Card BG)
+  --desaturated_blue : #8b97c6;    //(Text)
+  --white : #ffffff;               //(Text)
 
   // Light Theme  
 
-$white : #ffffff;                 //(BG)
-$very_pale_blue : #f5f7ff;     // (Top BG Pattern)
-$light_grayish_blue : #f0f2fa;  //(Card BG)
-$dark_grayish_blue : #63687e;     //(Text)
-$very_dark_blue_txt : #1e202a;      //(Text)
-
+  --very_pale_blue : #f5f7ff;     // (Top BG Pattern)
+  --light_grayish_blue : #f0f2fa;  //(Card BG)
+  --dark_grayish_blue : #63687e;     //(Text)
+  --very_dark_blue_txt : #1e202a;      //(Text)
+}
 
 // Fonts
 
