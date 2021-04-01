@@ -19,10 +19,31 @@ let dark_theme = {
 
 let domStyles = document.documentElement.style;
 
-// domStyles.setProperty('--lime_green', '#000')
+let headerTitle = $(".header_title , .followers");
+let headerTitle2 = $(".overview_dashboard .title");
+let modeSwitch =  $("#social_dashboard .toggle_wrapper");
+let socialMediaCols =  $("#social_dashboard .sm_stats .col");
+let detailCols =  $("#social_dashboard .detailed_dashboard .col");
 
+let timeline = new gsap.timeline();
+
+function animationOnPageLoad(){
+    timeline.from('body', { duration: 0.2, opacity: 0, backgroundColor: '#000' });
+    timeline.from(headerTitle, { duration: 1, x: -50, opacity: 0 });
+    timeline.from(modeSwitch, { duration: 1, x: 50, opacity: 0 }, '-=1');
+    timeline.from(socialMediaCols, { duration: 0.5, opacity: 0, y:-50, stagger: 0.2 });
+    timeline.from(headerTitle2, { duration: 1, x: -50, opacity: 0 });
+    timeline.from(detailCols, { duration: 0.5, opacity: 0, y:50, stagger: 0.2 }, '-=0.5');
+}
+
+function animationOnToggle(){
+    timeline.from(socialMediaCols, { duration: 0.5, opacity: 0, stagger: 0.2 });
+    timeline.from(detailCols, { duration: 0.5, opacity: 0, stagger: 0.2 }, '-=0.5');
+}
 
 $(document).ready(function(){
+    animationOnPageLoad();
+
     $("#toggle_switch").click(function(){
         var main_parent = $(this).closest("#social_dashboard");
 
@@ -35,9 +56,9 @@ $(document).ready(function(){
             domStyles.setProperty('--very_dark_blue', light_theme.white)
             domStyles.setProperty('--white', light_theme.very_dark_blue_txt)
             domStyles.setProperty('--desaturated_blue', light_theme.dark_grayish_blue)
-            domStyles.setProperty('--dark_desaturated_blue', light_theme.light_grayish_blue)
-
-
+           
+            // animationOnToggle();
+            
         }
         else{
             $(main_parent).removeClass("activated_light_theme");
@@ -48,7 +69,9 @@ $(document).ready(function(){
             domStyles.setProperty('--very_dark_blue', dark_theme.very_dark_blue)
             domStyles.setProperty('--white', dark_theme.white)
             domStyles.setProperty('--desaturated_blue', dark_theme.desaturated_blue)
-            domStyles.setProperty('--dark_desaturated_blue', dark_theme.light_grayish_blue)
+
+            // animationOnToggle();
+
         }
     });
 });
