@@ -1066,6 +1066,10 @@ hr {
   padding-right: 0;
 }
 
+body {
+  background-color: var(--very_dark_blue_top_bg);
+}
+
 .dashboard_screen .media_dashboard {
   background-color: var(--very_dark_blue_top_bg);
   padding-top: 36px;
